@@ -1,0 +1,101 @@
+@import '../../App/vars.scss';
+@import '../../App/mixins.scss';
+
+
+.tables__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3em;
+    align-items: center;
+    justify-content: space-between;
+
+    @include tablet {
+        justify-content: center;
+    }
+}
+
+.table {
+    position: relative;
+}
+
+.text-not-avail {
+    position: absolute;
+    opacity: 0;
+    z-index: 1;
+    width: 110%;
+    top: 50%;
+    left: -5%;
+    transform: translateY(-50%);
+    color: $invalid;
+    font-weight: 600;
+    text-align: center;
+    transition: 0.5s ease;
+}
+
+.text-not-avail--active {
+    opacity: 1;
+}
+
+.seats__wrapper {
+    display: grid;
+    row-gap: 1.2em;
+    column-gap: 1.8em;
+    justify-items: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    
+
+    @include mobile {
+        gap: 0;
+    }
+
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: var(--width);
+        height: var(--height);
+        background: rgba(255,255,255,0.1);
+        backdrop-filter: blur(8px);
+        border-top: 2px solid rgba(225, 225, 225, 0.3);
+        border-left: 2px solid rgba(225, 225, 225, 0.1);
+        border-right: 1px solid rgba(225, 225, 225, 0.2);
+
+    }
+
+    &::before {
+        content: var(--before-content);
+        text-align: right;
+        padding: 0.3em 0.5em;
+        width: var(--width);
+        height: var(--height);
+        z-index: 2;
+        position: absolute;
+        color: $white;
+        font-weight: 600;
+
+        @include adaptiv-font(35, 30)
+    }
+}
+
+
+
+.seat {
+    width: 10vh;
+    height: 10vh;
+    background-color: rgb($white, 0.25);
+    border-radius: 500px;
+
+    @include mobile {
+        width: 8vh;
+        height: 8vh;
+    }
+}
+
+.table-available .seat{
+    background-color: rgb($yellow, 0.7);
+}
+
+
+

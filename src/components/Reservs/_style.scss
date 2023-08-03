@@ -1,0 +1,41 @@
+@import '../../App/vars';
+@import '../../App/mixins';
+
+.main-reserv__card {
+    width: 80%;
+    margin: 0 auto 1em;
+    padding: 1em;
+    text-align: left;
+
+    @include mobile {
+        width: 100%;
+    }
+}
+
+.main-reserv__title {
+    @include adaptiv-font(25, 20);
+    font-weight: 600;
+    margin-bottom: 1em;
+}
+
+.main-reserv__text {
+    margin-bottom: 0.6em;
+
+    &:last-of-type {
+        margin-bottom: 1.4em;
+    }
+}
+
+.main-reserv__btns {
+    text-align: end;
+    display: flex;
+    gap: 2em;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+
+    @include mobile {
+        justify-content: center;
+        gap: 1em;
+    }
+}

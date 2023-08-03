@@ -1,0 +1,22 @@
+// Colors
+$darkblue: #114455;
+$black: #000000;
+$yellow: #d0a149;
+$white: #ffffff;
+$invalid: #ff4141;
+
+// Fonts
+
+
+// Media
+$tablet: 1055px;
+$mobile: 700px;
+
+// Others
+$maxWidth: 1470;
+
+
+:export {
+    yellow: $yellow;
+    white: rgb($white, 0.3);
+}

@@ -1,0 +1,86 @@
+@import '../../App/vars.scss';
+@import '../../App/mixins.scss';
+
+.calendar__card {
+    width: 50%;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 1.5em 1em;
+
+    @include tablet {
+      width: 80%;
+    }
+
+    @include mobile {
+      width: 100%;
+    }
+}
+
+.calendar__title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.8em;
+    font-weight: 600;
+
+    @include adaptiv-font(25, 20)
+}
+
+.calendar__icons{
+    display: flex;
+    gap: 1em;
+    cursor: pointer;
+}
+
+
+
+.weeks {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  justify-items: center;
+  justify-content: space-between;
+  margin-bottom: 1em;
+  @include adaptiv-font(20, 14);
+}
+  
+.days{
+  text-align: center;
+  display: grid;
+  column-gap: 0.5em;
+  row-gap: 1.5em;
+  grid-template-columns: repeat(7, 1fr);
+  justify-items: center;
+  @include adaptiv-font(20, 16)
+}
+
+
+
+.days li{
+    z-index: 1;
+    cursor: pointer;
+    display: inline;
+    position: relative;
+}
+
+.date-inactive {
+  pointer-events: none;
+  opacity: 0;
+}
+
+.date-active {
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $yellow;
+    border-radius: 2em;
+  }
+}
+  

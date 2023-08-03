@@ -1,0 +1,33 @@
+@import '../../App/vars.scss';
+@import '../../App/mixins.scss';
+
+
+.edit__wrapper {
+    padding-top: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.edit__card {
+    max-width: 600px;
+    padding: 1.5em;
+}
+
+.edit__title {
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+
+.edit__btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-cancel:hover {
+    color: $yellow;
+}

@@ -1,0 +1,32 @@
+@import '../../App/vars.scss';
+@import '../../App/mixins.scss';
+
+.form-input {
+    width: 100%;
+    border: 2px solid $white;
+    border-radius: 0.7em;
+    padding: 0.7em;
+    margin: 0.3em 0 0.1em;
+  
+    &:not(:first-of-type) {
+        margin-top: 1.3em;
+    }
+  
+    &:focus {
+      border-color: $yellow;
+  }
+}
+
+.form-error {
+    color: $invalid;
+}
+
+.form__input {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 1.3em;
+}
+
+.invalid, .invalid:focus {
+    border-color: $invalid;
+}

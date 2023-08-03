@@ -1,0 +1,98 @@
+@import '../../App/vars.scss';
+@import '../../App/mixins.scss';
+
+
+.time__title {
+    text-align: center;
+    @include adaptiv-font(30, 20);
+    margin-bottom: 2em;
+}
+
+.time__inner{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    gap: 3em;
+    flex-wrap: wrap;
+}
+
+.time__text {
+    margin-bottom: 0.3em;
+
+    @include adaptiv-font(24, 17)
+}
+
+.time__block {
+    display: flex;
+    flex-direction: row;
+    gap: 0.3em;
+    align-items: baseline;
+    justify-content: center;
+
+
+    @include adaptiv-font(30, 25);
+}
+
+
+.time__input {
+    padding: 0.5em;
+    border: 2px solid $white;
+    border-radius: 1em;
+    text-align: center;
+    width: 3em; 
+    position: relative;
+}
+
+.time-invalid {
+    border-color: $invalid;
+}
+
+input[type='number']::-webkit-inner-spin-button, 
+input[type='number']::-webkit-outer-spin-button { 
+    opacity: 1;
+}
+
+input[type='number']::-webkit-inner-spin-button, 
+input[type='number']::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+.time__dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.time__sublist {
+    max-height: 0px;
+    overflow: auto;
+    transition: 0.5s ease;
+    cursor: pointer;
+
+    &::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 1em;
+        background-color: $white;
+    }
+
+    &--active {
+        max-height: 250px;
+    }
+
+}
+
+
+.sublist__number {
+    text-align: center;
+    padding: 0.2em 0.4em;
+}
+
+
+
+
+

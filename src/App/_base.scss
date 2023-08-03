@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+@import '../App/_vars.scss';
+@import '../App/_mixins.scss';
+
+body {
+    background: linear-gradient(to right, $darkblue, $black);
+    color: $white;
+    font-family: 'Montserrat';
+    @include adaptiv-font(18, 14);
+}
+
+.container {
+    max-width: #{$maxWidth + px};
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+
+.title {
+    font-weight: 600;
+    @include adaptiv-font(35, 25);
+    text-align: center;
+}
+
+
+.btn {
+    padding: 0.7em 3em;
+    border-radius: 1em;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+.btn-filled {
+    background-color: $yellow;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.btn-outlined {
+    border: 2px solid $white;
+    border-radius: 5em;
+    transition: 0.3s ease;
+    
+    &:hover {
+        color: $yellow;
+        border-color: $yellow;
+    }
+
+}
+
+.glass {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(20px);
+    border-top: 2px solid rgba(225, 225, 225, 0.3);
+    border-left: 2px solid rgba(225, 225, 225, 0.1);
+    border-right: 1px solid rgba(225, 225, 225, 0.2);
+}
+
+.sublist {
+    color: $white;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(20px);
+    box-shadow: 0px 2px 0px rgba(225, 225, 225, 0.3) inset,
+                2px 0px 0px rgba(225, 225, 225, 0.1) inset,
+                0px 0px 1px rgba(225, 225, 225, 0.2) inset;
+}
+
+input::-ms-reveal, input::-ms-clear {
+    display: none;
+}
+
